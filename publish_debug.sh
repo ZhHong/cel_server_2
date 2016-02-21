@@ -5,7 +5,7 @@ if [ ! -d "../publish" ];
 	then
 		mkdir "../publish"
 fi
-CURTIME=`date "+%y-%m-%d-cel_server-release-0.00"`
+CURTIME=`date "+%y-%m-%d-cel_server-debug-0.00"`
 CURTIME=${CURTIME}$@
 PUBLISHROOT=../publish/${CURTIME}
 
@@ -43,7 +43,7 @@ cp -rf ./server/luaclib ${PUBLISHROOT}/server
 cp -rf ./server/lualib ${PUBLISHROOT}/server
 cp -rf ./server/service ${PUBLISHROOT}/server
 
-find ${PUBLISHROOT} -type f -name '*.lua' -print -exec 3rd/skynet/3rd/lua/luac -o {} {} \;
+#find ${PUBLISHROOT} -type f -name '*.lua' -print -exec 3rd/skynet/3rd/lua/luac -o {} {} \;
 
 find ${PUBLISHROOT} -type f -name '*.c' -print -exec rm {} \;
 find ${PUBLISHROOT} -type f -name '*.h' -print -exec rm {} \;
@@ -62,7 +62,6 @@ rm -rf ${PUBLISHROOT}
 #ehco
 echo "****************************************************************************"
 echo "publish on ${PUBLISHROOT}"
-echo "you should remove ${PUBLISHROOT} date"
 echo "you should cp config.example to config and change it,if not existed!"
 echo "type kill <pid> to stop launch! or ./stop_all.sh"
 echo "type ./start.sh to start launch!"

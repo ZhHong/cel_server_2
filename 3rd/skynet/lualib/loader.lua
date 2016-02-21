@@ -9,6 +9,7 @@ local main, pattern
 
 local err = {}
 for pat in string.gmatch(LUA_SERVICE, "([^;]+);*") do
+	-- if compile this place need change replace ? to ?.lua
 	local filename = string.gsub(pat, "?", SERVICE_NAME)
 	local f, msg = loadfile(filename)
 	if not f then
