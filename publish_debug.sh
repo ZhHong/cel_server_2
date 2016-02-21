@@ -19,6 +19,8 @@ mkdir $PUBLISHROOT/patches
 cp -f ./chmod.sh ${PUBLISHROOT}/
 cp -f ./start_server.sh ${PUBLISHROOT}/
 cp -f ./stop_all.sh ${PUBLISHROOT}/
+cp -f ./patch_v.sh ${PUBLISHROOT}/
+cp -f ./client.sh ${PUBLISHROOT}/
 
 echo "---------------------cp src------------------------"
 mkdir ${PUBLISHROOT}/3rd
