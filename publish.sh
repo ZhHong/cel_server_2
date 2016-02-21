@@ -13,6 +13,7 @@ rm -rf ${PUBLISHROOT}
 mkdir ${PUBLISHROOT}
 
 mkdir $PUBLISHROOT/logs
+mkdir $PUBLISHROOT/patches
 
 
 cp -f ./chmod.sh ${PUBLISHROOT}/
