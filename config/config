@@ -1,0 +1,23 @@
+root = "./"
+thread = 2  -- not more than cpu core
+logger = nil -- log output
+-- logger = root.."../../logs/cel_server.log" -- log floder
+-- logservice = 'syslog'
+-- daemon = root.."../../logs/cel_server.pid" -- run in background
+harbor = 0 -- 0 single node or need master address standalone
+-- address = "127.0.0.1:2536"
+-- master = "127.0.0.1:2013"
+bootstrap = "snlua bootstrap"  -- the first start skynet service
+-- standalone = "0.0.0.0:2013"
+luaservice = root.."service/?.lua;"..root.."test/?.lua;"..root.."examples/?.lua" -- lua service folder
+lualoader = "lualib/loader.lua"
+snax = root.."examples/?.lua;"..root.."test/?.lua"
+cpath = root.."cservice/?.so;"  -- c .so location
+lua_path = root.."lualib/?.lua" -- package.path for require
+lua_cpath =  root.."cservice/?.so;"..root.."luaclib/?.so"-- package.path for require
+preload = root.."examples/preload.lua"  -- run preload.lua before every lua service run
+start = "main"  -- bootstrap last  the skynet main,default main.lua ,this lua service is luaservice
+
+maxclient = 4096  -- self config
+systemport = 8302
+webport = 8001
