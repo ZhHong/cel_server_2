@@ -1,5 +1,6 @@
 #include <lua.h>
 #include <lauxlib.h>
+#include <stdint.h>  //include to use uint32_t
 
 static uint32_t sid;
 
