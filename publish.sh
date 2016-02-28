@@ -5,7 +5,7 @@ if [ ! -d "../publish" ];
 	then
 		mkdir "../publish"
 fi
-CURTIME=`date "+%y-%m-%d-cel_server-release-0.00"`
+CURTIME=`date "+%y-%m-%d-singularity-release-0.00"`
 CURTIME=${CURTIME}$@
 PUBLISHROOT=../publish/${CURTIME}
 
